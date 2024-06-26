@@ -1,0 +1,490 @@
+@import 'variaveis';
+
+
+
+.skills {
+    border: 2px solid white;
+    padding: 0px 0;
+
+    &__itens__habilidades__container {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+        margin: auto;
+        padding: 0 100px;
+
+
+        .habilidades-column-left {
+            padding: 100px 0;
+            transition: .5s;
+
+            .h1 {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                padding: 0 100px 0 0;
+
+                button {
+                    outline: none;
+                    border: none;
+                }
+
+                .collapseContainer {
+                    width: 100%;
+                    height: 75px;
+                    background-color: black;
+                    border-bottom: 1px solid white;
+                    overflow: hidden;
+                    transition: all .5s ease-in-out;
+
+
+                    .collapse-Soft-Skills {
+                        width: 100%;
+                        height: 70px;
+                        border-radius: 15px;
+                        background-color: black;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        transition: 1s;
+                        margin-bottom: 5px;
+                        cursor: pointer;
+
+
+
+                        p {
+                            font-size: 22px;
+                            padding: 0 20px;
+
+                        }
+
+                        span {
+                            visibility: hidden;
+                            font-size: 30px;
+                            padding: 0 20px;
+                            transition: 1s;
+                            transition: transform 0.3s ease;
+                        }
+
+                    }
+
+                    .textCollapse {
+                        padding: 0 30px;
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: beige;
+                        font-family: serif;
+                        line-height: 30px;
+                    }
+                }
+
+                .collapseContainer:hover button>span {
+                    visibility: visible;
+                }
+
+            }
+
+
+        }
+
+        .lineCenter {
+            height: 100%;
+            width: 2px;
+            background-color: aliceblue;
+        }
+
+        .habilidades-column-right {
+            padding: 100px 0;
+            transition: 1s;
+
+
+            .h1 {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                margin: auto;
+                width: 60%;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-gap: 30px 50px;
+
+
+                h5 {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 30px 1fr;
+                    grid-gap: 30px;
+                    align-items: center;
+                    margin: 0px auto;
+                    padding: 10px 20px;
+
+
+                    border: 1px solid white;
+                    border-radius: 50px;
+
+                    text-align: start;
+                    font-weight: bold;
+                    transition: .5s;
+
+                    :last-child {
+                        margin-bottom: 0;
+
+                        p {
+                            margin-left: 10px;
+                            padding: 0px 10px;
+                            font-style: bold;
+                            color: #000;
+                            font-weight: 800 !important;
+                            font-size: 20px;
+                            transform: 1s;
+                        }
+
+                        img {
+                            display: block;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                h5:hover {
+                    transform: scale(1.1);
+                    border-color: $variaveis;
+
+                    p {
+                        color: $variaveis;
+                    }
+                }
+            }
+        }
+
+
+    }
+    .collapseOpen {
+        height: auto !important;
+        padding: 0 0 50px;
+    }
+}
+
+
+@media (max-width: 1375px) {
+    .skills {
+
+        &__itens__habilidades__container {
+            padding: 0 0px;
+
+        }
+
+        .habilidades-column-left {
+            padding: 100px 0;
+            transition: .5s;
+
+            .h1 {
+                margin: auto;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                padding: 0;
+
+
+                .collapseContainer {
+                    .collapse-Soft-Skills {
+                        p {
+                            font-size: 20px;
+                            padding: 0 20px;
+                            text-align: center;
+
+                        }
+
+                        span {
+                            visibility: hidden;
+                            font-size: 30px;
+                            padding: 0 20px;
+                            transition: 1s;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        .habilidades-column-right {
+            padding: 100px 0;
+            transition: 1s;
+
+
+
+            .h1 {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                margin: auto;
+                width: 90%;
+                padding: 10px 0;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-gap: 30px 10px;
+
+
+                h5 {
+                    width: 200px;
+                    display: grid;
+                    grid-template-columns: 15px 1fr;
+                    grid-gap: 10px;
+                    align-items: center;
+                    margin: 0px auto;
+                    padding: 10px 0 10px 20px;
+
+                    border: 1px solid white;
+                    border-radius: 50px;
+
+                    text-align: start;
+                    font-weight: bold;
+                    transition: .5s;
+
+                    p {
+                        margin-left: 10px;
+                        padding: 0px 10px;
+                        font-style: bold;
+                        font-weight: 800 !important;
+                        font-size: 15px;
+                        transform: 1s;
+                    }
+
+                    img {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+
+            h5:hover {
+                transform: scale(1.1);
+                border-color: $variaveis;
+
+                p {
+                    color: $variaveis;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 970px) {
+
+    .skills {
+
+        &__itens__habilidades__container {
+            display: block;
+
+        }
+
+        .habilidades-column-left {
+            padding: 100px 0 25px;
+            transition: .5s;
+
+            .h1 {
+                margin: auto;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                padding: 0;
+
+
+                .collapseContainer {
+                    .collapse-Soft-Skills {
+                        p {
+                            font-size: 20px;
+                            padding: 0 20px;
+                            text-align: center;
+
+                        }
+
+                        span {
+                            visibility: hidden;
+                            font-size: 30px;
+                            padding: 0 20px;
+                            transition: 1s;
+                            transition: transform 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+
+        .habilidades-column-right {
+            padding: 0px 0 25px;
+            transition: 1s;
+
+
+
+            .h1 {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+
+            .container {
+                margin: auto;
+                width: 90%;
+                padding: 10px 0;
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-gap: 30px 10px;
+
+
+                h5 {
+                    width: 200px;
+                    display: grid;
+                    grid-template-columns: 15px 1fr;
+                    grid-gap: 10px;
+                    align-items: center;
+                    margin: 0px auto;
+                    padding: 10px 0 10px 20px;
+
+                    border: 1px solid white;
+                    border-radius: 50px;
+
+                    text-align: start;
+                    font-weight: bold;
+                    transition: .5s;
+
+                    p {
+                        margin-left: 10px;
+                        padding: 0px 10px;
+                        font-style: bold;
+                        font-weight: 800 !important;
+                        font-size: 15px;
+                        transform: 1s;
+                    }
+
+                    img {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+
+            h5:hover {
+                transform: scale(1.1);
+                border-color: $variaveis;
+
+                p {
+                    color: $variaveis;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .skills {
+
+
+        &__itens__habilidades__container {
+
+            .habilidades-column-left {
+
+
+                .h1 {}
+
+                .container {
+
+
+                    .collapseContainer {
+
+
+                        .collapse-Soft-Skills {
+
+
+
+                            p {
+                                font-size: 20px;
+                                padding: 0 20px;
+
+                            }
+
+                            .pTitulo {
+                                padding: 0 0 0 10px;
+                                font-size: 15px;
+                            }
+
+                            span {
+                                visibility: hidden;
+                                font-size: 20px;
+                                padding: 0 20px;
+                                transition: 1s;
+                                transition: transform 0.8s ease;
+                            }
+
+                        }
+
+                        .textCollapse {
+                            padding: 14px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: beige;
+                            font-family: sans-serif;
+                            line-height: 30px;
+                        }
+                    }
+
+                    .collapseContainer:hover button>span {
+                        visibility: visible;
+                    }
+
+                }
+
+
+            }
+
+            .habilidades-column-right {
+
+
+                .container {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 30px 5px;
+
+
+                    h5 {
+                        width: 150px;
+
+                        :last-child {
+                            margin-bottom: 0;
+
+                            p {
+                                font-size: 11px;
+
+
+                            }
+                        }
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+    .skills .habilidades-column-right .container h5 p {
+        font-size: 11px !important;
+    }
+
+    .collapseOpen {
+        transform: translateY(25px);
+        padding: 0 0 50px 0;
+    }
+}

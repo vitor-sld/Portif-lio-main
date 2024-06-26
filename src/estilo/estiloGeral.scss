@@ -1,0 +1,150 @@
+@import 'variaveis';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+}
+
+a {
+    transition: .5 left;
+    position: relative;
+    text-decoration: none;
+}
+a.linkContatos{
+    text-decoration: underline !important;
+}
+p {
+    font-family: $paragraphFont;
+}
+
+
+h1 {
+    font-family: $title;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $subtitle;
+}
+
+nav a:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    background-color: rgb(253, 204, 140);
+    height: 5px;
+    top: 30px;
+    left: 0px;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+nav a#linkWhatsapp::after {
+    transform: scaleX(0);
+
+}
+
+nav a:hover:after {
+    transform: scaleX(1);
+}
+
+#logoSite::after {
+    display: none;
+}
+
+a:hover {
+    color: rgb(253, 204, 140);
+    transform: scale(1.1)
+}
+
+h1,
+.h1 {
+    text-align: justify;
+    font-size: 60px;
+}
+
+h2,
+.h2 {
+    font-size: 40px;
+    color: rgb(253, 204, 140);
+}
+
+h5,
+.h5 {
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.h6 {
+    font-size: 25px;
+    color: rgb(253, 204, 140);
+
+}
+
+.hero {
+    @include telaDividida;
+
+
+    border: 1px solid white;
+
+    &__text-box {
+        width: 40vw;
+        margin: auto;
+
+        &__titulos {
+            margin: 20px 0;
+        }
+
+        &__links {
+            a {
+
+                ion-icon,
+                img {
+                    font-size: 40px;
+                    width: 40px;
+                    color: white;
+                    margin: 20px 10px 30px;
+                }
+            }
+        }
+
+    }
+
+    &__text-box__resume-about-me {
+        .p-resume-about-me {
+            font-size: 24px;
+            line-height: 140%;
+            color: white;
+
+
+
+        }
+    }
+}
+
+@media (max-width: 1375px) {
+
+    h1,
+    .h1 {
+        font-size: 2em;
+    }
+
+    h2,
+    .h2 {
+        font-size: 1.5em;
+    }
+    p{
+        font-size: 16px;
+    }
+}
